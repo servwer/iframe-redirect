@@ -16,10 +16,13 @@ function App() {
   }
 
   const onParentMessage = (event) => {
+    console.log(35463456, event)
     if (!event.data || (event.origin === window.location.origin)) {
       return;
     }
+    console.log(999999, event)
     const data = JSON.parse(event.data);
+    console.log('data', data)
     setState(data)
   }
 
