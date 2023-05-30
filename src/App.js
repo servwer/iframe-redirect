@@ -17,7 +17,7 @@ function App() {
 
   const onClick2 = () => {
     // console.log('window.top.location.href', window.top.location.href);
-    // window.parent.location.href = '/iframe-redirect'
+    window.parent.location.href = '/iframe-redirect'
   }
 
   return (
