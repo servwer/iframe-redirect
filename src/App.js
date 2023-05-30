@@ -7,13 +7,7 @@ function App() {
     // window.addEventListener('')
   },[])
 
-  const onClick1 = () => {
-    // console.log('window.top.location.href', window.top.location.href);
-    // window.top.location.href = '/iframe-redirect'
-    console.log(window.top)
-    console.log(window.parent)
-
-  }
+ 
 
   const onParentMessage = (event) => {
     console.log(35463456, event)
@@ -32,6 +26,12 @@ function App() {
     window.addEventListener('message', onParentMessage);
   })
 
+  const onClick1 = () => {
+    // console.log('window.top.location.href', window.top.location.href);
+    window.top.location.href = 'http://localhost:3000/iframe-redirect'
+  }
+  console.log('window.top', window.top)
+  console.log('window.parent', window.parent)
   const onClick2 = () => {
     // console.log('window.top.location.href', window.top.location.href);
     window.parent.location.href = 'http://localhost:3000/iframe-redirect'
