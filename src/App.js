@@ -7,18 +7,21 @@ function App() {
     // window.addEventListener('')
   },[])
 
-  const onClick = () => {
-    console.log('window.top.location.href', window.top.location.href);
-    setTimeout(() => {
-      console.log('after 3 sec')
-      window.parent.location.href = '/iframe-redirect'
-      // window.top.location.href = '/iframe-redirect'
-    }, 3000)
+  const onClick1 = () => {
+    // console.log('window.top.location.href', window.top.location.href);
+    window.top.location.href = '/iframe-redirect'
+
+  }
+
+  const onClick2 = () => {
+    // console.log('window.top.location.href', window.top.location.href);
+    window.parent.location.href = '/iframe-redirect'
   }
 
   return (
     <div className="App">
-      <button onClick={onClick}>to top level</button>
+      <button onClick={onClick1}>to top level by top</button>
+      <button onClick={onClick2}>to top level by parent</button>
     </div>
   );
 }
