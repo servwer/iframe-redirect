@@ -11,7 +11,8 @@ function App() {
     console.log('window.top.location.href', window.top.location.href);
     setTimeout(() => {
       console.log('after 3 sec')
-      window.top.location.href = '/iframe-redirect'
+      window.parent.location.href = '/iframe-redirect'
+      // window.top.location.href = '/iframe-redirect'
     }, 3000)
   }
 
