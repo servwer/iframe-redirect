@@ -23,6 +23,8 @@ function App() {
     setState(data)
   }
 
+  console.log(123123, state)
+
   useEffect(() => {
     window.addEventListener('message', onParentMessage);
   })
