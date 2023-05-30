@@ -1,8 +1,8 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
-
+  const [state, setState] = useState()
   useEffect(() => {
     // window.addEventListener('')
   },[])
@@ -14,6 +14,18 @@ function App() {
     console.log(window.parent)
 
   }
+
+  const onParentMessage = (event) => {
+    if (!event.data || (event.origin === window.location.origin)) {
+      return;
+    }
+    const data = JSON.parse(event.data);
+    setState(data)
+  }
+
+  useEffect(() => {
+    window.addEventListener('message', onParentMessage);
+  })
 
   const onClick2 = () => {
     // console.log('window.top.location.href', window.top.location.href);
