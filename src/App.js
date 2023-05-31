@@ -29,7 +29,7 @@ function App() {
 
   const onClick1 = () => {
     // console.log('window.top.location.href', window.top.location.href);
-    window.top.location.href = 'http://localhost:3000/iframe-redirect'
+    // window.top.location.href = 'http://localhost:3000/iframe-redirect'
     window.location.href = 'https://iframe-redirect.vercel.app/ffff'
   }
   console.log('window.top', window.top)
