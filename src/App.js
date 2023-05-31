@@ -30,7 +30,6 @@ function App() {
   const onClick1 = () => {
     // console.log('window.top.location.href', window.top.location.href);
     // window.top.location.href = 'http://localhost:3000/iframe-redirect'
-    window.location.href = 'https://iframe-redirect.vercel.app/ffff'
     // eslint-disable-next-line no-restricted-globals
     parent.window.location.href = 'http://localhost:3000/iframe-441234'
   }
@@ -42,10 +41,20 @@ function App() {
     window.location.href = '/qwe'
   }
 
+  const onClick3 = () => {
+    // console.log('window.top.location.href', window.top.location.href);
+    // window.parent.location.href = 'http://localhost:3000/'
+    window.location.href = 'https://iframe-redirect.vercel.app/ffff'
+  }
+
   return (
     <div className="App">
-      <button onClick={onClick1}>to top level by top</button>
-      <button onClick={onClick2}>to top level by parent</button>
+      <div>
+        <button onClick={onClick1}>to top level by top</button>
+        <button onClick={onClick2}>to top level by parent</button>
+        <button onClick={onClick3}>wlh change</button>
+      </div>
+      <p>{window.location.href}</p>
     </div>
   );
 }
