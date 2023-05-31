@@ -31,6 +31,7 @@ function App() {
     // console.log('window.top.location.href', window.top.location.href);
     // window.top.location.href = 'http://localhost:3000/iframe-redirect'
     window.location.href = 'https://iframe-redirect.vercel.app/ffff'
+    parent.window.location.href = 'http://localhost:3000/iframe-441234'
   }
   console.log('window.top', window.top)
   console.log('window.parent', window.parent)
