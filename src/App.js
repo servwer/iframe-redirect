@@ -31,6 +31,7 @@ function App() {
     // console.log('window.top.location.href', window.top.location.href);
     // window.top.location.href = 'http://localhost:3000/iframe-redirect'
     window.location.href = 'https://iframe-redirect.vercel.app/ffff'
+    // eslint-disable-next-line no-restricted-globals
     parent.window.location.href = 'http://localhost:3000/iframe-441234'
   }
   console.log('window.top', window.top)
